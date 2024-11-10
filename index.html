@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3646cd11c5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>Your ToDo List</li>
+        </ul>
+    </nav>
+
+    <div class="container" id="container">
+        <!-- dialog box to enter input for new to-do list -->
+        <div class="dialog-overlay" id="dialogOverlay">
+            <div class="dialog-box">
+                
+                <input type="text" class="inputHead" id="listHeading" placeholder="Enter To-do" >
+                <textarea type="textarea" class="inputDesc" id="description" rows="10" cols="20" placeholder="Enter description" ></textarea>
+                <button class="submit" id="submit" >Submit</button>
+                <button class="cancel" onclick="closeDialog()">Cancel</button>
+            </div>
+        </div>
+
+        <!-- to open dialog box -->
+        <div class="addNote" id="addNote">
+            <div class="noteHeading">
+                Add a Note
+            </div>
+            <button id="addBtn" class="addBtn"><i class="fa-regular fa-note-sticky"></i></button>
+        </div>
+
+        <!-- code of each note -->
+        <!-- <div class="Note">
+            <div class="noteHeading">
+                heading
+            </div>
+            <div class="description">
+                description
+            </div>
+            <button class="changeLook" id="change" ><i class="fa-solid fa-bars"></i></button>
+        </div> -->
+
+        <!-- popup to change color of note -->
+        <div class="popup" id="popup-btn">
+            <p class="options" onclick="change('none')">Default</p>
+            <p class="options" onclick="change('Red')">Red</p>
+            <p class="options" onclick="change('Yellow')">Yellow</p>
+            <p class="options" onclick="change('Green')">Green</p>
+        </div>
+    
+        
+    </div>
+    
+    
+</body>
+<script src="script.js"></script>
+</html>
